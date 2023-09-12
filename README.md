@@ -1,2 +1,2 @@
 # Event-Management-System
-A simple event management sysytem using HTML, CSS with Django as backend
+A simple Event Management System using HTML, CSS with Django as backend. Here the events mainly focuses on CS Domains.
