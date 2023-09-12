@@ -1,0 +1,170 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   
+    /* background-color:#fff4f4; */
+    background-image: url(https://www.gcsec.com.br/wp-content/uploads/2022/12/Modelo-blog-capa-02-1.png);
+    background-size:cover; /* This property scales the image to cover the entire element */
+    background-repeat: no-repeat;
+    background-position: center top; 
+  /* Center the background image vertically */
+    min-height: 100vh;
+ 
+}
+
+h2{
+    color:rgb(35, 27, 68);
+    font-size: 40px;
+    font-family:"Audiowide", sans-serif;
+}
+
+
+.h{
+    color:rgb(35, 27, 68);
+    font-size: 35px;
+    text-shadow:0 0 20px #5bb3d0;
+}
+
+
+header{
+    background-color: rgb(12, 19, 47);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    
+}
+
+
+footer{
+
+    /* background-color: rgb(54,71,115); */
+    background-color: rgb(12, 19, 47);
+    color: rgb(216, 239, 249);
+    text-align: center;
+    padding: 25px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    
+}
+
+
+#Logo{
+    width: 70px;
+    height: auto;
+}
+
+
+nav{
+    gap: 20px;
+    display: flex;
+    
+}
+.nav-link{
+    color: aliceblue;
+    text-decoration: none;
+    border: 1px solid rgb(201, 229, 233);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow:0 1px 5px rgb(81, 168, 219);
+
+}
+.nav-link:hover{
+    background-color:rgb(57, 145, 162);
+}
+
+
+
+
+
+
+#events{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding-top: 70px;
+    /* text-align: center; */
+    
+}
+
+.event-card p {
+    color: #333; /* Dark gray text color */
+}
+
+
+.event-card{
+text-align: center;
+box-shadow: 0 8.5px 10px rgb(128, 215, 228);
+margin-top: 50px;
+padding: 20px;
+width: 240px;
+height: auto;
+border-radius: 5px;
+background-color: rgb(245, 249, 250);
+border: 0.5px solid rgb(47, 62, 101);
+
+
+}
+.event-card:hover{
+    background-color:rgb(222, 235, 239);
+
+}
+
+.detail-btn:hover{
+    background-color: #14445d;
+}
+.detail-btn{
+    border: 1.59px solid;
+    border-radius: 3px;
+    border-color: rgb(54, 87, 99);
+    color: #35728e; 
+    text-decoration: none;
+    width: 95px;
+    padding: 6px;
+    color: white;
+    background-color: #26536a;
+
+}
+
+#event-details{
+display: flex;
+justify-content: center;
+padding-top: 80px;
+
+}
+.event-c{
+text-align: center;
+box-shadow: 0 8.5px 10px rgb(128, 215, 228);
+margin-top: 40px;
+padding: 20px;
+width: 300px;
+height: auto;
+border-radius: 5px;
+background-color:#f0f5f5;
+color: black;
+}
+.event-c p{
+    /* color: #312d2d; */
+    color: #222121;
+}
+
+input[type=submit]{
+    padding:8px 15px;
+    margin: 8px 0;
+    font-size: 16px;
+    background-color: #ADD8E6;
+    box-shadow:  0 6px 8px rgb(57, 118, 183);
+    border : 1.5px solid  rgb(30, 109, 148);
+    border-radius: 8px;
+}
+
+input[type=submit]:hover{
+    background-color: rgb(94, 185, 185);
+}
+
+

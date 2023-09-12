@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+
+    <title>Event Management</title>
+</head>
+<body>
+    <style>
+        p{
+            color:  #35728e;
+        }
+    </style>
+    <header>
+        <img id="Logo"   src="static/TLogo.png"    alt="Logo of SciTech"/>
+        <nav style="height: auto;">
+            <a class="nav-link" href="">Home</a>
+            <a class="nav-link" href="">Login</a>
+            <a class="nav-link" href="">Registration</a>
+        </nav>
+    </header>
+    <section id="events">
+        {% for event in events %}
+        <div class="event-card">
+            <h2>{{event.event_title}}</h2>
+            <p style="font-size: 15.8px;"><b>Location: </b>{{event.event_loc}}</p>
+            <p style="font-size: 15.8px;"><b>Date: </b>{{event.date}}</p>
+
+            <br><a href="./eventdetail.html" class="detail-btn">Event Details</a>
+        </div>
+        {% endfor %}
+
+    </section>
+
+
+    <footer>©2023 Event Registration System</footer>
+</body>
+</html>
