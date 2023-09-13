@@ -24,13 +24,13 @@
         </nav>
     </header>
     <section id="event-details">
-        <div class="event-c">
+        <div class="event-c" >
             <h2 class="h">{{event.event_title}}</h2>
             <p style="font-size:17px;"><b>Location:</b> {{event.event_loc}}</p>
             <p style="font-size:17px;"><b>Date:</b> {{event.date}}</p>
             <p style="font-size:17px;">{{event.description}} </p>
 
-            <form action="{% url 'eventdetails' event.pk %}" method="POST">
+            <form action="{% url 'eventdetails' event.pk %}" method="POST" >
                 <h3 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Apply for this Event</h3>
                 {% csrf_token %}
                 {{form.as_p}}
