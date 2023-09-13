@@ -1,10 +1,13 @@
 <!DOCTYPE html>
+{% load static %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Details</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
 </head>
 <body >
     <style>
@@ -22,26 +25,30 @@
     </header>
     <section id="event-details">
         <div class="event-c">
-            <h2 class="h">Cyber Security</h2>
-            <p style="font-size:16px;"><b>Location:</b> FISAT</p>
-            <p style="font-size:16px;"><b>Date:</b> 08 September 2023</p>
-            <p style="font-size:16px;"><b>Description:</b> This is a <b>free 3 day</b> workshop on Cyber Security. Students of any year can attend the session. </p>
-            <form action="">
-                <h3>Apply for this Event</h3>
-                <label for="fullname">Full Name:</label>
-                <input type="text" name="fullname">
+            <h2 class="h">{{event.event_title}}</h2>
+            <p style="font-size:17px;"><b>Location:</b> {{event.event_loc}}</p>
+            <p style="font-size:17px;"><b>Date:</b> {{event.date}}</p>
+            <p style="font-size:17px;">{{event.description}} </p>
+
+            <form action="{% url 'eventdetails' event.pk %}" method="POST">
+                <h3 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Apply for this Event</h3>
+                {% csrf_token %}
+                {{form.as_p}}
+                <!-- <label for="fullname">Full Name:</label>
+                <input type="text" name="fullname" placeholder="Your Full Name">
                 <br><br><label for="email">Email:</label>
-                <input type="email" name="email">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" name="email" placeholder="Your email">
                 <br><br><label for="phone">Phone No:</label>
             
-                <input type="number" name="phone">
-                <br><br><input type="submit" value="Submit">
+                <input type="number" name="phone" placeholder="Your Phone No:">-->
+                <br><br><input type="submit" value="Submit"> 
             </form>
             <!-- <a href="" class="detail-btn">Event Details</a> -->
         </div>
     </section>
 
 
-    <footer>©2023 Event Registration System</footer>
+
+    <footer>©Event Registration System. All rights reserved.</footer>
 </body>
 </html>
